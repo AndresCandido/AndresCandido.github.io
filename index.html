@@ -3,43 +3,212 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="Wp_style.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
 
-    <body>
-        <div id="container">
-            <h1> Andres Candido </h1>
-            <img id="profile" src="Images/Profile_pic.jpg">
-            <hr>
-            <p>
-                Hello and thank you for stopping by! My name is Andres. I'm an undergraduate student at Florida State University.
-                <br>
-                I'm currently pursuing a B.S. in Computational Biology, with minors in both Math and Computer Science.
-                <br>
-                Expected to graduate in Fall of 2023.
-            </p>
-            <hr>              
-            <div id="button_container">
+    <header>
+        <nav class="flex items-center gap-4 px-6 lg:px-10 py-4 top-0 left-0 bg-gray-seethrough backdrop-blur-md shadow-md fixed w-full z-50">
+            <a aria-label="logo5.jpg" href="#Home" data-aos="flip-up" data-aos-duration="700" class="overflow-hidden bg-gradient-to-br from-purple-400 to-red-400 w-7 h-7 relative aos-init aos-animate"><img src="Images/logo5.jpg"></a>
+            <a href="#Home" class="nav-text-home">Andres Candido</a> 
+            <div class="hidden lg:flex gap-9 items-center ml-auto">
+                <a href="#About" class="nav-text" noroute="">About</a>
+                <a href="#Experience" class="nav-text" noroute="">Experience</a>
+                <a href="#Projects" class="nav-text" noroute="">Projects</a>
+                <a href="#Design" class="nav-text" noroute="">Design</a>
+                <a href="#Research" class="nav-text" noroute="">Research</a> 
+                <a href="#resume" class="nav-text" >Resume</a> 
+                <button title="toggle theme" aria-label="toggle theme" class="text-sm font-semibold border-gray-500 border-2 hover:bg-gray-200 dark:hover:bg-gray-700 py-1.5 px-3 dark:text-gray-50 rounded-md transition-colors">Fish</button>
+            </div> 
+            <button title="Navigation Menu" aria-label="Navigation Menu" class="lg:hidden text-lg ml-auto dark:text-white"></button>
+        </nav>
+    </header>
 
-                <div id="button">
-                    Projetcs
+    <body class="moving-gradient-1 aos-init aos-animate">
+
+        <div id="Home" class="section">
+            <div class="bg-metallic-gray">
+                <div class="moving-gradient-2 p-5 shadow-2xl">
+                    <div class="bg-gray-900 px-5 py-10 shadow-2xl">
+                        <h1 class="mb-3 font-mono font-black text-5xl text-white"><div class="relative inline-block reveal"><p id="text" class="opacity-0" style="animation-delay: 800ms;">Andres Candido</p> <div class="absolute overflow-hidden pointer-events-none inset-0"><div id="cover" class="absolute inset-0 bg-current transform-gpu -translate-x-[101%]" style="animation-delay: 800ms;"></div></div></div></h1> 
+                        <p class="text-lg md:text-xl lg:text-xl mb-8 font-bold text-gray-500 dark:text-gray-400 ml-1"><div class="relative inline-block reveal"><p id="text" class="opacity-0" style="animation-delay: 1000ms;">Software developer / Biologist</p> <div class="absolute overflow-hidden pointer-events-none inset-0"><div id="cover" class="absolute inset-0 bg-current transform-gpu -translate-x-[101%]" style="animation-delay: 1000ms;"></div></div></div></p>    
+                    </div>
                 </div>
-
-                <div id="button">
-                    Career
-                </div>
-
-                <div id="button">
-                    Skills
-                </div>
-
-                <div id="button">
-                    Research
-                </div>
-
             </div>
 
+            <button title="Go to about me" aria-label="Go to about me" class="group py-5 absolute bottom-20 right-0 left-0">
+                <a href="#About"><i class="hover-vertical arrow rot-down"></i> </a>
+            </button>     
         </div>
+
+        <div id="About" class="section2">
+            <div class="bg-metallic-gray2 relative">
+                <div class="moving-gradient-2 p-5 shadow-2xl">
+                    <div class="bg-gray-900 px-5 py-10 shadow-2xl flex flex-row ">
+                        <div class="flex flex-col">
+                            <h2 class="inline-block text-left tracking-wide text-5xl font-mono font-black text-gray-200 mb-4">
+                                <div class="relative inline-block reveal">
+                                    <p id="text" class="opacity-0" style="animation-delay: 200ms;">About Me</p> 
+                                    <div class="absolute overflow-hidden pointer-events-none inset-0">
+                                        <div id="cover" class="absolute inset-0 bg-current transform-gpu -translate-x-[101%]" style="animation-delay: 200ms;"></div>
+                                    </div>
+                                </div>
+                            </h2>
+
+                            <p class="">
+                                Hello and thank you for stopping by! My name is Andres. I'm an undergraduate student at Florida State University.
+                                <br>
+                                I'm currently pursuing a B.S. in Computational Biology, with minors in both Math and Computer Science.
+                                <br>
+                                Expected to graduate in Fall of 2023.
+                            </p>
+                            <hr>              
+                            <div id="button_container" class="mt-3">
+                                <a href="#Career" id="button">Career</a>
+                                <a href="#Projetcs" id="button">Projects</a>
+                                <a href="#Skills" id="button">Skills</a>
+                                <a href="#Research" id="button">Research</a>
+                            </div>
+                        </div>
+
+                        <div class="moving-gradient-3 p-5 shadow-2xl max-w-md relative">
+                            <div class="bg-gray-900 p-3 shadow-2xl">
+                                <img src="Images/Profile_pic.jpg">
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>         
+        </div>
+
+        <div id="Experience" class="section2">
+            <div class="bg-metallic-gray2 relative">
+                <div class="moving-gradient-2 p-5 shadow-2xl">
+                    <div class="bg-gray-900 px-5 py-10 shadow-2xl">
+                        <div class="flex flex-col">
+                            <h2 class="inline-block text-center tracking-wide text-5xl font-mono font-black text-gray-200">
+                                <div class="relative inline-block reveal">
+                                    <p id="text" class="opacity-0" style="animation-delay: 200ms;">Experience</p> 
+                                    <div class="absolute overflow-hidden pointer-events-none inset-0">
+                                        <div id="cover" class="absolute inset-0 bg-current transform-gpu -translate-x-[101%]" style="animation-delay: 200ms;"></div>
+                                    </div>
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5 section2 bg-gray-seethrough">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+                    <div class="flex flex-col">
+                        <h2 class="text-left mb-4 ml-4 text-2xl font-extrabold" style="text-shadow:10px 10px 10px rgba(0,0,0,.5), 20px 20px 20px rgba(0,0,0,.4), 30px 30px 30px rgba(0,0,0,.1)"><span class="text-purple-700">Edu</span>cation</h2>
+                        <ul>
+                            <li class="py-4 pl-4"><div class=" absolute -left-2 top-3 flex items-center space-x-2 md:-left-4"><span class="border bg-metallic-gray2 px-2 py-1 text-xs font-bold text-white shadow-xl shadow-black/30">Aug 2019 - Dec 2023</span><span class="ml-4 text-xs text-gray-200">Florida State University</span></div><div class="text-left prose prose-sm flex flex-col pt-10 prose-ul:list-none"><h2 class="mb-3 font-bold text-white">Bachelor of Science: Computational Biology</h2><p class=" text-gray-400">I hold a Bachelor of Science degree in Computational Biology with minors in Computer Science and Mathematics, which has provided me with a strong foundation in both Computer Science and Biological Sciences.<br> My coursework encompassed a wide range of subjects, including genetics, mathematics, physics, chemistry, bioinformatics algorithms, data structures, and computer programming with languages such as Python, C/C++, MATLAB, C#, Java, and R.<br>It also gave me experience with web development technologies such as HTML, CSS, JavaScript, MySQL, and PHP.</p></div></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-left mb-4 ml-4 text-2xl font-extrabold" style="text-shadow:10px 10px 10px rgba(0,0,0,.5), 20px 20px 20px rgba(0,0,0,.4), 30px 30px 30px rgba(0,0,0,.1)"><span class="text-purple-700">Exp</span>erience</h2>
+                        <ul>
+                            <li class="py-4 pl-4"><div class=" absolute -left-2 top-3 flex items-center space-x-2 md:-left-4"><span class="border bg-metallic-gray2 px-2 py-1 text-xs font-bold text-white shadow-xl shadow-black/30">Jan 2023 - Dec 2023</span><span class="ml-4 text-xs text-gray-200">Florida State University</span></div><div class="text-left prose prose-sm flex flex-col pt-10 prose-ul:list-none"><h2 class="mb-3 font-bold text-white">Research Assistant</h2><p class="text-gray-400">During my tenure as a Research Assistant, I was tasked with understanding and dissecting <a href="https://github.com/horsedayday/eQTLsingle" class="text-purple-700">eQTLsingle</a>, an R package for discovering eQTLs only with single cell RNA-seq (scRNA-seq) data. My main focus was understanding the logic and algorithms used in eQTLsingle and identifying their limitations, in order to enhance our understanding of Expression Quantitative Trait Loci (eQTLs) - genomic loci associated with variations of downstream gene expression - in cancer cells.<br>To complete my tasks, computer programming played a crucial role, particularly through the use of R. I created R scripts for data preprocessing, statistical analysis, and visualization of scRNA-seq datasets.</p><ul><li class="mt-3 ml-4 text-gray-300"><strong>Skills:</strong> R, GitHub, Shell Scripting, Data Analysis</li></ul></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Projects" class="section2">
+            <div class="bg-metallic-gray2 relative">
+                <div class="moving-gradient-2 p-5 shadow-2xl">
+                    <div class="bg-gray-900 px-5 py-10 shadow-2xl">
+                        <div class="flex flex-col">
+                            <h2 class="inline-block text-center tracking-wide text-5xl font-mono font-black text-gray-200">
+                                <div class="relative inline-block reveal">
+                                    <p id="text" class="opacity-0" style="animation-delay: 200ms;">Projects</p> 
+                                    <div class="absolute overflow-hidden pointer-events-none inset-0">
+                                        <div id="cover" class="absolute inset-0 bg-current transform-gpu -translate-x-[101%]" style="animation-delay: 200ms;"></div>
+                                    </div>
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+
+            <div class="mt-5 section2 bg-gray-seethrough">
+                <div class="space-y-40 px-7">
+                    <article class="sm:mx-14 lg:mx-0">
+                        <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-14">
+                            <aside class="lg:max-w-1/2 w-fit shrink">
+                                <div class="mx-0 mb-4 max-h-80 w-fit moving-gradient-3 shadow-xl overflow-hidden">
+                                    <img data-aos="slide-left" data-aos-duration="200" data-aos-delay="100" class="max-h-[inherit] w-auto object-scale-down p-2 sm:p-3" src="Images/Vortiger_with_background.png" alt="Screenshot of Little Lolli Shop (WIP)" loading="lazy">
+                                </div> 
+                                <div data-aos="flip-up" data-aos-delay="100" class="flex items-center justify-center gap-3 aos-init aos-animate">
+                                    <a href="https://github.com/AndresCandido/Sorcerers_Wrath_V2" aria-label="Look at GitHub repo" target="_blank" class="px-3 py-1.5 transition-colors flex items-center bg-blue-200 hover:bg-blue-300 text-gray-800 group"><p class="group-hover:underline">Github</p> <i class="fab fa-github ml-3 text-lg"></i></a> <a href="https://identicalbug.itch.io/sorcerers-wrath-test" aria-label="Go to live website" target="_blank" class="flex px-3 py-1.5 items-center bg-green-200 hover:bg-green-300 group text-gray-800"><p class="group-hover:underline">Play it</p> <i class="fas fa-external-link-alt ml-3"></i></a>
+                                </div>
+                            </aside> 
+                            <section class="flex-1 text-left">
+                                <h1 data-aos="fade-left" class="text-2xl lg:text-4xl font-extrabold text-gray-300 dark:text-gray-50 mb-1 aos-init aos-animate">Sorcerer's Wrath <time class="ml-0.5 font-light text-right text-xl lg:text-2xl dark:text-gray-300">2020</time></h1>
+                                <p data-aos="fade" data-aos-delay="100" class="font-bold font-mono text-sm text-purple-700 dark:text-purple-400 mb-3 aos-init aos-animate">with a team of classmates</p>
+                                <hr data-aos="fade" data-aos-delay="150" class="mb-4 border-gray-400 dark:border-gray-500 aos-init aos-animate">
+                                <p data-aos="fade" data-aos-delay="200" class="mb-4 text-gray-400 font-semibold dark:text-gray-300 leading-relaxed max-w-prose aos-init aos-animate">Sorcerer's Wrath is a 2D platformer with a medieval style that served as the final project for DIG3725, Intro to Game Design.</p>
+                                <div data-aos="fade" data-aos-delay="300" class="text-sm font-mono font-semibold flex flex-wrap gap-2 aos-init aos-animate"><a href="https://unity.com/" target="_blank" class="border bg-metallic-gray2 px-2 text-gray-300">Unity</a><a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank" class="border bg-metallic-gray2 px-2 text-gray-300">C#</a><a href="https://www.gimp.org/" target="_blank" class="border bg-metallic-gray2 px-2 text-gray-300">Gimp</a><a href="https://itch.io/" target="_blank" class="border bg-metallic-gray2 px-2 text-gray-300">itch.io</a></div>
+                            </section>
+                        </div>
+                    </article>
+                    <hr>
+                </div>
+            </div>  
+
+        </div>
+
+
+
+        <div id="Design" class="section2">
+            <div class="bg-metallic-gray2 relative">
+                <div class="moving-gradient-2 p-5 shadow-2xl">
+                    <div class="bg-gray-900 px-5 py-10 shadow-2xl">
+                        <div class="flex flex-col">
+                            <h2 class="inline-block text-center tracking-wide text-5xl font-mono font-black text-gray-200">
+                                <div class="relative inline-block reveal">
+                                    <p id="text" class="opacity-0" style="animation-delay: 200ms;">Design</p> 
+                                    <div class="absolute overflow-hidden pointer-events-none inset-0">
+                                        <div id="cover" class="absolute inset-0 bg-current transform-gpu -translate-x-[101%]" style="animation-delay: 200ms;"></div>
+                                    </div>
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+        </div>
+
+        <div id="Research" class="section2">
+            <div class="bg-metallic-gray2 relative">
+                <div class="moving-gradient-2 p-5 shadow-2xl">
+                    <div class="bg-gray-900 px-5 py-10 shadow-2xl">
+                        <div class="flex flex-col">
+                            <h2 class="inline-block text-center tracking-wide text-5xl font-mono font-black text-gray-200">
+                                <div class="relative inline-block reveal">
+                                    <p id="text" class="opacity-0" style="animation-delay: 200ms;">Research</p> 
+                                    <div class="absolute overflow-hidden pointer-events-none inset-0">
+                                        <div id="cover" class="absolute inset-0 bg-current transform-gpu -translate-x-[101%]" style="animation-delay: 200ms;"></div>
+                                    </div>
+                                </div>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+        </div>
+
     </body>
+
+    <footer id="footer">
+        <P>
+            Designed & Built by Andres Candido &copy 2024 <br> All Rights Reserved
+        </P>
+    </footer>
 
 </html>
