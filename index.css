@@ -567,6 +567,10 @@ img,video {
     height: 100vh
 }
 
+.h-screen-80 {
+    height: 80vh
+}
+
 .h-1\/2 {
     height: 50%
 }
@@ -595,6 +599,10 @@ img,video {
 
 .w-3 {
     width: .75rem
+}
+
+.w-60per {
+    width: 60%
 }
 
 .w-full {
