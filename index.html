@@ -5,7 +5,7 @@
     <head>
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">          <!-- Import the icon library -->
-        <script src="https://unpkg.com/@google/model-viewer@0.0.7/dist/model-viewer.js"></script>                          <!-- Import the 3D model viewer -->
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script> <!-- Import the 3D model viewer -->
     </head>
 
     <header>
@@ -291,16 +291,16 @@
             <div class="mt-5 section2 bg-gray-seethrough">
                 <section class="main max-w-6xl mx-auto mb-40">
                     <div class="mb-16 flex justify-evenly md:hidden">
-                        <button class="bg-gray-800 hover:bg-gray-700 text-white transition-all rounded-sm px-6 py-2 flex items-center"><i class="fas fa-caret-left text-xl mr-4"></i> <p class="font-bold">Previous</p></button>
-                        <button class="bg-gray-800 hover:bg-gray-700 text-white transition-all rounded-sm px-6 py-2 flex items-center"><p class="font-bold">Next</p> <i class="fas fa-caret-right text-xl ml-4"></i>
+                        <button class="bg-metallic-gray2 hover:bg-gray-900 text-white transition-all rounded-sm px-6 py-2 flex items-center"><i class="fas fa-caret-left text-xl mr-4"></i> <p class="font-bold">Previous</p></button>
+                        <button class="bg-metallic-gray2 hover:bg-gray-900 text-white transition-all rounded-sm px-6 py-2 flex items-center"><p class="font-bold">Next</p> <i class="fas fa-caret-right text-xl ml-4"></i>
                         </button>
                     </div> 
                     <div class="md:flex items-center justify-center gap-10">
-                        <button data-aos="fade-right" data-aos-offset="100" data-aos-delay="200" class="hidden md:block bg-gray-800 hover:bg-gray-400 text-white transition-all p-5 pl-4 aos-init aos-animate"><i class="fas fa-caret-left text-4xl"></i></button>
-                        <div class="border max-w-md mx-auto">
-                            <model-viewer src="3D-models/Fighter.glb"  controls auto-rotate shadow-intensity="1"> </model-viewer>
+                        <button data-aos="fade-right" data-aos-offset="100" data-aos-delay="200" class="hidden md:block bg-metallic-gray2 hover:bg-gray-900 text-white transition-all p-5 pl-4 aos-init aos-animate"><i class="fas fa-caret-left text-4xl"></i></button>
+                        <div class="border w-full h-full">
+                            <model-viewer src="3D-models/Fighter.glb" camera-controls auto-rotate shadow-intensity="1"> </model-viewer>
                         </div>
-                        <button data-aos="fade-left" data-aos-offset="100" data-aos-delay="200" class="hidden md:block bg-gray-800 hover:bg-gray-700 text-white transition-all p-5 pr-4 aos-init aos-animate"><i class="fas fa-caret-right text-4xl"></i></button>
+                        <button data-aos="fade-left" data-aos-offset="100" data-aos-delay="200" class="hidden md:block bg-metallic-gray2 hover:bg-gray-900 text-white transition-all p-5 pr-4 aos-init aos-animate"><i class="fas fa-caret-right text-4xl"></i></button>
                     </div>
                 </section>
             </div>
@@ -322,7 +322,9 @@
                         </div>
                     </div>
                 </div>
-            </div>         
+            </div> 
+            
+            <div class="mt-5 section2 bg-gray-seethrough"></div>
         </div>
 
     </body>
