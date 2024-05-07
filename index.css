@@ -601,8 +601,8 @@ img,video {
     width: .75rem
 }
 
-.w-60per {
-    width: 60%
+.w-60px {
+    width: 550px
 }
 
 .w-full {
