@@ -18,10 +18,10 @@
                 <a href="#Projects" class="nav-text" noroute="">Projects</a>
                 <a href="#Design" class="nav-text" noroute="">Design</a>
                 <a href="#Research" class="nav-text" noroute="">Research</a> 
-                <a href="#resume" class="nav-text" >Resume</a> 
+                <a href="Resume.html" class="nav-text" >Resume</a> 
                 <button title="toggle theme" aria-label="toggle theme" class="text-sm font-semibold border-gray-500 border-2 hover:bg-gray-200 dark:hover:bg-gray-700 py-1.5 px-3 dark:text-gray-50 rounded-md transition-colors">Fish</button>
             </div> 
-            <button title="Navigation Menu" aria-label="Navigation Menu" class="lg:hidden text-lg ml-auto dark:text-white"></button>
+            <button title="Navigation Menu" aria-label="Navigation Menu" class="lg:hidden text-lg ml-auto dark:text-white"><i class="fas fa-bars"></i></button>        
         </nav>
     </header>
 
@@ -74,12 +74,8 @@
                                 <hr>
                                 <p data-aos="fade" data-aos-delay="200" class="mb-8 mt-8 text-gray-400 font-semibold dark:text-gray-300 leading-relaxed max-w-prose aos-init aos-animate">Hello and thank you for stopping by! My name is Andres.<br> I'm an undergraduate student at Florida State University.<br>I'm currently pursuing a B.S. in Computational Biology, with minors in both Math and Computer Science.<br>Expected to graduate in Fall of 2023.</p>
                                 <hr class="mb-4">
-                                <div data-aos="fade" data-aos-delay="300" class="justify-center mt-8 text-sm font-mono font-semibold flex flex-wrap gap-2 aos-init aos-animate">
-                                    <a href="#Experience" noroute="" class="bg-green-200 hover:bg-green-300 text-gray-800 px-2">Experience</a>
-                                    <a href="#Projects" noroute="" class="bg-green-200 hover:bg-green-300 text-gray-800 px-2">Projects</a>
-                                    <a href="#Design" noroute="" class="bg-green-200 hover:bg-green-300 text-gray-800 px-2">Design</a>
-                                    <a href="#Research" noroute="" class="bg-green-200 hover:bg-green-300 text-gray-800 px-2">Research</a>
-                                    <a href="#Resume" noroute="" class="bg-green-200 hover:bg-green-300 text-gray-800 px-2">Resume</a>
+                                <div data-aos="fade" data-aos-delay="300" class="flex items-center justify-center gap-3 aos-init aos-animate">
+                                    <a href="Resume.html" class="flex px-3 py-1.5 items-center bg-green-200 hover:bg-green-300 group text-gray-800"><p class="group-hover:underline">View Resume</p> <i class="fas fa-external-link-alt ml-3"></i></a>
                                 </div>
                             </section>
                         </div>
@@ -317,7 +313,28 @@
                 </div>
             </div> 
             
-            <div class="mt-5 section2 bg-gray-seethrough"></div>
+            <div class="mt-5 section2 bg-gray-seethrough">
+                <div class="space-y-5 px-7">
+                    <article class="sm:mx-14 lg:mx-0">
+                        <div class="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-6">
+                            <aside class="lg:max-w-1/2 w-fit shrink">
+                                <div class="mx-0 mb-4 max-h-80 w-fit moving-gradient-3 shadow-xl overflow-hidden">
+                                    <img data-aos="slide-left" data-aos-duration="200" data-aos-delay="100" class="max-h-[inherit] w-auto object-scale-down p-2 sm:p-3" src="Images/FSU-emblem.jpg" alt="Screenshot of Little Lolli Shop (WIP)" loading="lazy">
+                                </div> 
+                                <div data-aos="flip-up" data-aos-delay="100" class="flex items-center justify-center gap-3 aos-init aos-animate">
+                                    <a href="Documents/Thesis-AndresCandido.pdf" aria-label="Go to live website" target="_blank" class="flex px-3 py-1.5 items-center bg-green-200 hover:bg-green-300 group text-gray-800"><p class="group-hover:underline">View PDF</p> <i class="fas fa-external-link-alt ml-3"></i></a>
+                                </div>
+                            </aside> 
+                            <section class="flex-1 text-left">
+                                <h1 data-aos="fade-left" class="text-2xl lg:text-4xl font-extrabold text-gray-300 dark:text-gray-50 mb-1 aos-init aos-animate">Undergrad Thesis <time class="ml-0.5 font-light text-right text-xl lg:text-2xl dark:text-gray-300">2023</time></h1>
+                                <p data-aos="fade" data-aos-delay="100" class="font-bold font-mono text-sm text-purple-700 dark:text-purple-400 mb-3 aos-init aos-animate">Computational Biology</p>
+                                <hr data-aos="fade" data-aos-delay="150" class="mb-4 border-gray-400 dark:border-gray-500 aos-init aos-animate">
+                                <p data-aos="fade" data-aos-delay="200" class="mb-4 text-gray-400 font-semibold dark:text-gray-300 leading-relaxed max-w-prose aos-init aos-animate">In this thesis, we aimed to increase our understanding of how eQTLs can be detected at the single-cell level using scRNA-seq data and of how <a href="https://github.com/horsedayday/eQTLsingle" class="text-purple-700">eQTLsingle</a>, an eQTL analysis tool, can accomplish doing so. We also aimed to address eQTLsingle's inherent limitations due to only utilizing scRNA-seq for detecting eQTLs and to propose solutions to these limitations by using relevant literature.</p>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
 
     </body>
