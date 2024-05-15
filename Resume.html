@@ -4,6 +4,8 @@
 	<head>
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">        <!-- Import the icon library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script>
+        <script src="index.js"></script>
 	</head>
 
     <header>
@@ -23,14 +25,15 @@
         </nav>
     </header>
 
-	<body class="moving-gradient-1 aos-init aos-animate">
+	<body class="moving-gradient-1 flex flex-col aos-init aos-animate">
 
         <div class="section2">
             <div class="mb-5">
-                <a href="/" class="px-4 py-2 inline-block leading-4 border-green-400 border bg-green-200 hover:bg-green-300 rounded-none mr-3 text-gray-700 font-mono"><p class="text-gray-700 font-bold font-mono"><i class="fas fa-arrow-left mr-3"></i>Go Back</p></a>
-                <button class="px-4 py-1 font-bold font-mono text-gray-700 border-indigo-400 border bg-indigo-200 hover:bg-indigo-300 rounded-none"><i class="fas fa-print mr-3"></i>Print</button>
+                <a href="index.html" class="px-4 py-2 inline-block leading-4 border-green-400 border bg-green-200 hover:bg-green-300 rounded-none mr-3 text-gray-700 font-mono"><p class="text-gray-700 font-bold font-mono"><i class="fas fa-arrow-left mr-3"></i>Go Back</p></a>
+                <button onclick="window.print()" class="px-4 py-1 font-bold font-mono text-gray-700 border-indigo-400 border bg-indigo-200 hover:bg-indigo-300 rounded-none"><i class="fas fa-print mr-3"></i>Print</button>
+                <button onclick="saveDiv('pdf','Title')" class="px-4 py-1 font-bold font-mono text-gray-700 border-indigo-400 border bg-indigo-200 hover:bg-indigo-300 rounded-none"><i class="fas fa-download mr-3"></i>Download</button>
             </div> 
-            <main class="resume bg-white shadow-xl text-left flex flex-col justify-between">
+            <main id="pdf" class="resume bg-white shadow-xl text-left flex flex-col justify-between">
                 <section>
                     <div class="flex flex-row">
                         <div class="flex flex-col">
@@ -55,10 +58,8 @@
                         <p class="text-gray-500">C, C++, Python, MATLAB, C#, JavaScript, HTML, CSS, Java, R</p>
                         <h3 class="text-gray-700 font-bold">Database:</h3>
                         <p class="text-gray-500">MySQL, PHP, Apache</p>
-                        <h3 class="text-gray-700 font-bold">DevOps:</h3>
-                        <p class="text-gray-500">AWS, Firebase, Google Cloud, Heroku, Docker, Netlify, Github Actions</p>
                         <h3 class="text-gray-700 font-bold">Others:</h3>
-                        <p class="text-gray-500">Git, Unreal Engine, Unity Engine, Blender, Gimp, Adobe Photoshop</p>
+                        <p class="text-gray-500">Git, Unreal Engine, Unity Engine, Blender, Adobe Photoshop</p>
                     </div>
                 </section>
                 <section>
@@ -67,16 +68,15 @@
                         <li>
                             <div class="flex items-baseline gap-2">
                                 <h3 class="text-gray-700 font-bold title-text">Florida State University</h3>
-                                <em class="text-gray-500 title-text">Research Assistant</em> 
-                                <p class="text-gray-400 ml-auto right-text">Tallahassee, FL</p> 
-                                <p class="text-gray-400 right-text ml-2">jan 2023 - Dec 2023</p>
-                            </div> 
+                                <em class="text-gray-500 ml-auto title-text">Research Assistant</em>
+                                <p class="text-gray-400 ml-auto right-text text-xs">jan 2023 - Dec 2023</p>
+                            </div>
                             <ul class="list-square text-gray-700 pl-5 mt-0.5 text-xs">
-                                <li>Developed a centralized portal for analytics applications using React and Redux, introducing accessible HTML and Tailwind. </li>
-                                <li>Led production releases of the centralized portal, ensuring approval from quality assurance, running and fixing automated content testing, drafting Change Management requests, and executing scheduled deployments using Jenkins with 0 downtime. </li>
-                                <li>Designed and built a Python CronJob for tagging product emails, saving project managers 90% of time spent manually tagging emails. </li>
-                                <li>Created analytics reports using Jupyter notebooks and useful logging visualization using Splunk dashboards. </li>
-                                <li>Carried out frontend migration of a major A/B testing system from Angular.js, Bootstrap to React, TypeScript, and Tailwind. </li>
+                                <li>Developed scripts in R for preprocessing, statistical analysis, and visualization of scRNA-seq datasets. </li>
+                                <li>Dissected eQTLsingle, an R package for discovering Expression Quantitative Trait Loci (eQTLs) only with single cell RNA-seq (scRNA-seq) data in cancer cells. eQTLs are genomic loci associated with variations of downstream gene expression. </li>
+                                <li>Identified limitations in the logic and algorithms used in eQTLsingle. </li>
+                                <li>Proposed solutions to these limitations by searching for and studying relevant literature. </li>
+                                <li>Composed an academic thesis explaining the logic and algorithms used in eQTLsingle, their limitations, and the proposed solutions in detail. </li>
                             </ul> 
                         </li>
                     </ul>
@@ -88,7 +88,7 @@
                         <p class="text-gray-400 right-text">2019 - 2023</p>
                     </div> 
                     <div class="flex justify-between items-baseline mt-0.5">
-                        <p class="text-gray-700">Bachelor of Science- Computational Biology</p> 
+                        <p class="text-gray-700">Bachelor of Science - Computational Biology</p> 
                     </div>
                 </section>
                 <section>
@@ -97,49 +97,37 @@
                         <li>
                             <div class="flex justify-between items-baseline">
                                 <h3 class="text-gray-700 font-bold title-text flex items-baseline gap-1.5">Sorcerer's Wrath</h3> 
-                                <ul class="text-gray-400 flex right-text gap-4">
-                                    <li>
-                                        <a class="flex gap-1 items-center" href="https://github.com/BobShoaun/Bobcoin-Node" target="_blank"><i class="fab fa-github"></i>Bobcoin-Node</a> 
-                                    </li>
-                                    <li>
-                                        <a class="flex gap-1 items-center" href="https://github.com/BobShoaun/Bobcoin-Client" target="_blank"><i class="fab fa-github"></i>Bobcoin-Client</a> 
-                                    </li>
-                                </ul>
                             </div>
                             <ul class="list-square text-gray-700 pl-5 text-xs mt-0.5">
-                                <li>A proof of work cryptocurrency built using Typescript Node.js for business logic, Express, MongoDB, and web sockets for the Node backend/API, Jest for unit testing, React, Redux, and Bulma for the frontend block explorer, wallet software, and mining client. </li>
-                                <li>Secured using cryptographic hash algorithms, digital signatures, public-key cryptography, Merkle trees, Nakamoto consensus, BIP compliance, and the UTXO model, resulting in a tamper-proof blockchain ledger. </li>
-                                <li>Through this project, taught 20+ friends and family basic cryptocurrency usage, and grew a Discord community with 100+ members. </li>
+                                <li>Sorcerer's Wrath is a 2D platformer with a medieval style, it was developed using the Unity game engine version 2020.1.3f1. </li>
+                                <li>Led and managed a team of 4 junior developers, providing mentorship and support to struggling individuals. </li>
+                                <li>Designed and animated player and enemy characters using Gimp and Unity. Designed basement, inside castle 1, inside catsle 2, and final boss room levels. </li>
+                                <li>Implimented hitboxes and physics engine for characters and in-game objects. </li>
+                                <li>Helped creating C# scripts for player controller and enemy state machines. </li>
+                                <li>Managed version control during development using Sourcetree.</li>
                             </ul> 
                         </li>
                         <li>
                             <div class="flex justify-between items-baseline">
                                 <h3 class="text-gray-700 font-bold title-text flex items-baseline gap-1.5">Project_X</h3> 
-                                <ul class="text-gray-400 flex right-text gap-4">
-                                    <li>
-                                        <a class="flex gap-1 items-center" href="https://github.com/BobShoaun/Artsu.me" target="_blank"><i class="fab fa-github"></i>Artsu.me</a> 
-                                    </li>
-                                </ul>
                             </div> 
                             <ul class="list-square text-gray-700 pl-5 text-xs mt-0.5">
-                                <li>Developed an art hosting web app that allows artists to create a job-ready portfolio to showcase their artworks. </li>
-                                <li>Led and managed a team of 4 junior developers, providing mentorship and support to struggling individuals. </li>
-                                <li>Built using React, Tailwind, Redux for the frontend. Express, MongoDB, and Cloudinary for the backend. Heroku, Google Cloud for deployment. Jest and Supertest for testing. OAuth2.0 for authentication using Google or Facebook. </li>
+                                <li>Project_X is a prototype for a 3D fighting game, it was developed using the Unity game engine version 2022.3.10f1. </li>
+                                <li>Led and managed a team of 5 junior developers, providing mentorship and support to struggling individuals. </li>
+                                <li>Designed and animated 3D models of characters using Blender. </li>
+                                <li>Helped creating C# scripts for player controller. </li>
+                                <li>Managed version control during development using git and Github.</li>
                             </ul> 
                         </li>
                         <li>
                             <div class="flex justify-between items-baseline">
                                 <h3 class="text-gray-700 font-bold title-text flex items-baseline gap-1.5">Personal Website</h3>
-                                <ul class="text-gray-400 flex right-text gap-4">
-                                    <li>
-                                        <a class="flex gap-1 items-center" href="https://github.com/BobShoaun/Artsu.me" target="_blank"><i class="fab fa-github"></i>Artsu.me</a> 
-                                    </li>
-                                </ul>
                             </div> 
                             <ul class="list-square text-gray-700 pl-5 text-xs mt-0.5">
-                                <li>Developed an art hosting web app that allows artists to create a job-ready portfolio to showcase their artworks. </li>
-                                <li>Led and managed a team of 4 junior developers, providing mentorship and support to struggling individuals. </li>
-                                <li>Built using React, Tailwind, Redux for the frontend. Express, MongoDB, and Cloudinary for the backend. Heroku, Google Cloud for deployment. Jest and Supertest for testing. OAuth2.0 for authentication using Google or Facebook. </li>
+                                <li>Developed a portfolio website allowing the showcase of a job-ready portfolio, made by hand using HTML, CSS, and JavaScript. </li>
+                                <li>Hosted and deployed the website using Github Pages. </li>
+                                <li>Incorporated a 3D model showcase using google's 3D model-viewer web component.  </li>
+                                <li>Managed version control during development using git and Github.</li>
                             </ul> 
                         </li>
                     </ul>
