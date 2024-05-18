@@ -3,9 +3,9 @@
 <html>
 	<head>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="fish.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">        <!-- Import the icon library -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script>
-        <script src="index.js"></script>
+        <script src="fish.js"></script>
 	</head>
 
     <header>
@@ -19,9 +19,8 @@
                 <a href="index.html#Design" class="nav-text" noroute="">Design</a>
                 <a href="index.html#Research" class="nav-text" noroute="">Research</a> 
                 <a href="Resume.html" class="nav-text" >Resume</a> 
-                <button title="toggle theme" aria-label="toggle theme" class="text-sm font-semibold border-gray-500 border-2 hover:bg-gray-200 dark:hover:bg-gray-700 py-1.5 px-3 dark:text-gray-50 rounded-md transition-colors">Fish</button>
-            </div> 
-            <button title="Navigation Menu" aria-label="Navigation Menu" class="lg:hidden text-lg ml-auto dark:text-white"><i class="fas fa-bars"></i></button>        
+                <button  class="counter nav-text py-1.5 px-3"><i class="fas fa-fish mr-3"></i>0</button>
+            </div>         
         </nav>
     </header>
 
@@ -30,8 +29,7 @@
         <div class="section2">
             <div class="mb-5">
                 <a href="index.html" class="px-4 py-2 inline-block leading-4 border-green-400 border bg-green-200 hover:bg-green-300 rounded-none mr-3 text-gray-700 font-mono"><p class="text-gray-700 font-bold font-mono"><i class="fas fa-arrow-left mr-3"></i>Go Back</p></a>
-                <button onclick="window.print()" class="px-4 py-1 font-bold font-mono text-gray-700 border-indigo-400 border bg-indigo-200 hover:bg-indigo-300 rounded-none"><i class="fas fa-print mr-3"></i>Print</button>
-                <button onclick="saveDiv('pdf','Title')" class="px-4 py-1 font-bold font-mono text-gray-700 border-indigo-400 border bg-indigo-200 hover:bg-indigo-300 rounded-none"><i class="fas fa-download mr-3"></i>Download</button>
+                <button onclick="window.print()" class="px-4 py-1 font-bold font-mono text-gray-700 border-indigo-400 border bg-indigo-200 hover:bg-indigo-300 rounded-none"><i class="fas fa-print mr-3"></i>Print / <i class="fas fa-download mr-3"></i>Download</button>
             </div> 
             <main id="pdf" class="resume bg-white shadow-xl text-left flex flex-col justify-between">
                 <section>
@@ -43,7 +41,7 @@
                                     <li><a class="flex font-mono text-gray-600 gap-1.5 items-center text-xs" href="https://andrescandido.github.io/" target="_blank"><i class="fas fa-globe"></i>andrescandido.github.io</a></li>
                                     <li><p class="flex font-mono text-gray-600 gap-1.5 items-center text-xs"><i class="fas fa-envelope"></i> andrescandido2000@gmail</p></li>
                                     <li class="basis-1/3"><a class="flex font-mono text-gray-600 gap-1.5 items-center text-xs" href="https://github.com/AndresCandido" target="_blank"><i class="fab fa-github"></i>github.com/AndresCandido</a></li>
-                                    <li><p class="flex font-mono text-gray-600 gap-1.5 items-center text-xs" href=""><i class="fas fa-phone"></i>(407)800-1532</p></li>
+                                    <li><p class="flex font-mono text-gray-600 gap-1.5 items-center text-xs"><i class="fas fa-phone"></i>(407)800-1532</p></li>
                                     <li><p class="flex font-mono text-gray-600 gap-1.5 items-center text-xs"><i class="fas fa-map-marker-alt"></i>Windermere, FL, USA</p></li>
                                 </ul>
                             </div>
