@@ -2335,6 +2335,11 @@ html {
 }
 
 @media (min-width: 640px) {
+    .sm\:mx-0 {
+        margin-left:0;
+        margin-right: 0
+    }
+
     .sm\:mx-14 {
         margin-left:3.5rem;
         margin-right: 3.5rem
@@ -2343,6 +2348,11 @@ html {
     .sm\:mx-28 {
         margin-left: 7rem;
         margin-right: 7rem
+    }
+
+    .sm\:my-4 {
+        margin-top: 1rem;
+        margin-bottom: 1rem
     }
 
     .sm\:h-52 {
@@ -2355,6 +2365,14 @@ html {
 
     .sm\:p-10 {
         padding: 2.5rem
+    }
+
+    .sm\:pt-20 {
+        padding-top: 5rem
+    }
+
+    .sm\:gap-32{
+        gap: 8rem
     }
 }
 
