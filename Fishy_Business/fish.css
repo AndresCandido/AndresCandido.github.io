@@ -10,7 +10,7 @@
     font-size:3vmin;
     height:3vmin;
     left:calc(50% - 1.5vmin);
-    position:fixed;
+    position:absolute;
     text-align:center;
     top:-5%;
     transition:left, top ease-in-out;

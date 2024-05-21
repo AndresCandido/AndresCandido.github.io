@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
         counter = document.querySelector('.counter');
 
   let count = 0,
-      vw = window.innerWidth * 0.97,
-      vh = window.innerHeight * 0.97;
+    vw = window.innerWidth * 0.97,
+    vh = window.innerHeight;
 
   function getAngle(cx, cy, ex, ey) {
     var dy = ey - cy;
@@ -65,4 +65,5 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     console.error('Counter element not found');
   }
+
 });
