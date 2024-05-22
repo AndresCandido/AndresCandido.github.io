@@ -639,7 +639,7 @@ img,video {
     width: .75rem
 }
 
-.w-60px {
+.w-800px {
     width: 550px
 }
 
@@ -2373,6 +2373,10 @@ html {
 
     .sm\:gap-32{
         gap: 8rem
+    }
+
+    .sm\:w-32{
+        width: 8rem
     }
 }
 
