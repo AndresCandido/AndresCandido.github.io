@@ -9,6 +9,7 @@
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script> <!-- Import the 3D model viewer -->
         <link rel="stylesheet" href="Fishy_Business/fish.css">
         <script src="Fishy_Business/fish.js"></script>
+        <script src="Model_Swap.js"></script>
     </head>
 
     <header>
@@ -293,7 +294,7 @@
                         <button class="border bg-metallic-gray2 hover:bg-gray-90 text-white transition-all rounded-sm px-6 py-2 flex items-center"><i class="fas fa-caret-left text-xl mr-4"></i> <p class="font-bold">Previous</p></button>
                         <button class="border bg-metallic-gray2 hover:bg-gray-90 text-white transition-all rounded-sm px-6 py-2 flex items-center"><p class="font-bold">Next</p> <i class="fas fa-caret-right text-xl ml-4"></i></button>
                     </div>
-                    <model-viewer class="bg-metallic-gray2 border w-full h-700px" src="3D-models/Black_Wyvern.glb" camera-controls auto-rotate shadow-intensity="1"> </model-viewer>
+                    <model-viewer id="Models" class="bg-metallic-gray2 border w-full h-600px" src="3D-models/Ant.glb" camera-controls auto-rotate shadow-intensity="1"> </model-viewer>
                 </section>
             </div>
         </div>
