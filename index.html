@@ -291,8 +291,8 @@
             <div class="mt-5 section2 bg-gray-seethrough">
                 <section class="main max-w-6xl mx-auto mb-8">
                     <div class="flex items-center justify-center gap-10 mb-8">
-                        <button class="border bg-metallic-gray2 hover:bg-gray-90 text-white transition-all rounded-sm px-6 py-2 flex items-center"><i class="fas fa-caret-left text-xl mr-4"></i> <p class="font-bold">Previous</p></button>
-                        <button class="border bg-metallic-gray2 hover:bg-gray-90 text-white transition-all rounded-sm px-6 py-2 flex items-center"><p class="font-bold">Next</p> <i class="fas fa-caret-right text-xl ml-4"></i></button>
+                        <button onclick="prevModel()" class="border bg-metallic-gray2 hover:bg-gray-90 text-white transition-all rounded-sm px-6 py-2 flex items-center"><i class="fas fa-caret-left text-xl mr-4"></i> <p class="font-bold">Previous</p></button>
+                        <button onclick="nextModel()" class="border bg-metallic-gray2 hover:bg-gray-90 text-white transition-all rounded-sm px-6 py-2 flex items-center"><p class="font-bold">Next</p> <i class="fas fa-caret-right text-xl ml-4"></i></button>
                     </div>
                     <model-viewer id="Models" class="bg-metallic-gray2 border w-full h-600px" src="3D-models/Ant.glb" camera-controls auto-rotate shadow-intensity="1"> </model-viewer>
                 </section>
