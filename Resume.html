@@ -4,25 +4,26 @@
 	<head>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="navbar.css">
         <link rel="stylesheet" href="Fishy_Business/fish.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">        <!-- Import the icon library -->
         <script src="Fishy_Business/fish2.js"></script>
 	</head>
 
     <header>
-        <nav class="flex items-center gap-4 px-6 lg:px-10 py-4 top-0 left-0 bg-gray-seethrough backdrop-blur-md shadow-md fixed w-full z-50">
-            <a aria-label="logo5.jpg" href="index.html" data-aos="flip-up" data-aos-duration="700" class="overflow-hidden bg-gradient-to-br from-purple-400 to-red-400 w-7 h-7 relative aos-init aos-animate"><img src="Images/logo5.jpg"></a>
-            <a href="index.html" class="nav-text-home">Andres Candido</a> 
-            <div class="flex gap-9 sm:gap-38 items-center ml-auto">
-                <a href="index.html#About" class="nav-text" noroute="">About</a>
-                <a href="index.html#Experience" class="nav-text" noroute="">Experience</a>
-                <a href="index.html#Projects" class="nav-text" noroute="">Projects</a>
-                <a href="index.html#Design" class="nav-text" noroute="">Design</a>
-                <a href="index.html#Research" class="nav-text" noroute="">Research</a> 
-                <a href="Resume.html" class="nav-text" >Resume</a> 
-                <button  class="counter nav-text py-1.5 px-3"><i class="fas fa-fish mr-3"></i>0</button>
-            </div>         
-        </nav>
+        <div class="portfolio-navbar">
+        <nav class="flex items-center gap-4 px-6 py-4 top-0 left-0 bg-gray-seethrough backdrop-blur-md shadow-md fixed w-full z-50">
+                <a aria-label="logo5.jpg" href="index.html" class="overflow-hidden w-7 h-7 relative"><img src="Images/logo5.jpg"></a>
+                <a href="index.html" class="nav-text-home">Andres Candido</a> 
+                <div class="flex gap-9 items-center ml-auto">
+                    <a href="index.html#Projects" class="nav-text" noroute="">Projects</a>
+                    <a href="index.html#Design" class="nav-text" noroute="">Design</a>
+                    <a href="Library/bookselector.html" class="nav-text" noroute="">My Library</a>
+                    <a href="Resume.html" class="nav-text" >Resume</a> 
+                    <button  class="counter nav-text py-1.5 px-3"><i class="fas fa-fish mr-3"></i>0</button>
+                </div> 
+            </nav>
+        </div>
     </header>
 
 	<body class="moving-gradient-1 flex flex-col aos-init aos-animate">
@@ -32,6 +33,7 @@
                 <a href="index.html" class="px-4 py-2 inline-block leading-4 border-green-400 border bg-green-200 hover:bg-green-300 rounded-none mr-3 text-gray-700 font-mono"><p class="text-gray-700 font-bold font-mono"><i class="fas fa-arrow-left mr-3"></i>Go Back</p></a>
                 <button onclick="window.print()" class="px-4 py-1 font-bold font-mono text-gray-700 border-indigo-400 border bg-indigo-200 hover:bg-indigo-300 rounded-none"><i class="fas fa-print mr-3"></i>Print / <i class="fas fa-download mr-3"></i>Download</button>
             </div> 
+            
             <main id="pdf" class="resume bg-white shadow-xl text-left flex flex-col justify-between">
                 <section>
                     <div class="flex flex-row">

@@ -1,0 +1,408 @@
+/* Fixed Animated Title Effect for Book Selector */
+body {
+  background-color: #0c192c;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}
+
+.gradient-background {
+  background: linear-gradient(45deg,rgb(15, 29, 155),rgb(11, 3, 51),rgb(3, 29, 155));
+  background-size: 360% 360%;
+  animation: gradient-animation 11s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.centerMan {
+  display: flex;
+  justify-content: center;
+  margin-top: 4.5rem;
+}
+
+.titleContainer {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background-color: #0c192c;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.titleContainer::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  top: -3rem;
+  bottom: -3rem;
+  left: -3rem;
+  right: -3rem;
+  background: conic-gradient(
+    #fd004c,
+    #fe9000,
+    #fff020,
+    #3edf4b,
+    #3363ff,
+    #b102b7,
+    #fd004c
+  );
+  z-index: -2;
+  animation: rotate 10s linear infinite;
+}
+
+.titleContainer::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  background-color: #0c192c;
+  z-index: -1;
+  top: 7px;
+  bottom: 7px;
+  left: 7px;
+  right: 7px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.underline {
+  width: 80%;
+  margin: auto;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.articles {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.bookCenterMan {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 80%;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  background-color: #1c2b3a;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  bottom: -3rem;
+  left: -3rem;
+  right: -3rem;
+  background: conic-gradient(
+    #fd004c,
+    #fe9000,
+    #fff020,
+    #3edf4b,
+    #3363ff,
+    #b102b7,
+    #fd004c
+  );
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.book::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  bottom: 7px;
+  left: 7px;
+  right: 7px;
+  background-color: #1c2b3a;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.book:hover::before {
+  opacity: 1;
+  animation: hoverRotate 8s linear infinite;
+}
+
+@keyframes hoverRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.book:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.book img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.bookDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.bookTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.bookDescription {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btnStyle {
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnStyle:hover {
+  background-color: white;
+  color: #0c192c;
+}
+
+.bookMoreInfo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 19, 54, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.showBox {
+  display: flex;
+}
+
+.bookDetailsOverlay {
+  display: flex;
+  flex-direction: row;
+  background-color: #0c192c;
+  padding: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 70%;
+}
+
+.bookDetailsOverlay::before {
+  content: "";
+  position: absolute;
+  top: -250px;
+  bottom: -250px;
+  left: -250px;
+  right: -250px;
+  border-radius: 7%;
+  border: conic-gradient(
+    #fd004c,
+    #fe9000,
+    #fff020,
+    #3edf4b,
+    #3363ff,
+    #b102b7,
+    #fd004c
+  );
+  animation: rotateBorder 6s linear infinite;
+  z-index: -2;
+}
+
+.bookDetailsOverlay::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: #1c2b3a;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.popupImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.popupImage img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.popupInfo {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  padding-left: 0;
+  color: white;
+}
+
+.popupInfo h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.popupInfo p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.closeOverlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeOverlay:hover {
+  color: red;
+}
+
+.search-container {
+  display: flex;
+  width: 30rem;
+  align-items: center;
+  border: 2px solid white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.search-container input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  width: 100%;
+}
+
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #1c2b3a;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1;
+}
+
+.autocomplete-item {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.autocomplete-item:hover, .autocomplete-hover {
+  background-color: white;
+  color: #0c192c;
+}
+
+.autocomplete-tag {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-left: 5px;
+}
+
+.popupButtons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.popupBtn {
+  padding: 0.5rem 1rem;
+  background-color: rgb(106, 153, 253);
+  color: #0c192c;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.popupBtn:hover {
+  background-color: #11d382;
+  color: white;
+}

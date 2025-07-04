@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../navbar.css">
+    <link rel="stylesheet" href="bookselector.css">>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">          <!-- Import the icon library -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>My Library</title>
+    <link rel="stylesheet" href="../Fishy_Business/fish.css">
+    <script src="../Fishy_Business/fish.js"></script>
+  </head>
+
+  <header>
+    <div class="portfolio-navbar">
+      <nav class="flex items-center gap-4 px-6 py-4 top-0 left-0 bg-gray-seethrough backdrop-blur-md shadow-md fixed w-full z-50">
+            <a aria-label="logo5.jpg" href="../index.html" class="overflow-hidden w-7 h-7 relative"><img src="../Images/logo5.jpg"></a>
+            <a href="../index.html" class="nav-text-home">Andres Candido</a> 
+            <div class="flex gap-9 items-center mr-3 ml-auto">
+                <a href="../index.html#Projects" class="nav-text" noroute="">Projects</a>
+                <a href="../index.html#Design" class="nav-text" noroute="">Design</a>
+                <a href="bookselector.html" class="nav-text" noroute="">My Library</a>
+                <a href="../Resume.html" class="nav-text" >Resume</a> 
+                <button  class="counter nav-text py-1.5 px-3"><i class="fas fa-fish mr-1"></i>0</button>
+            </div> 
+        </nav>
+    </div>
+  </header>
+
+  <body class="gradient-background">
+    <div class="centerMan">
+      <div class="titleContainer">
+        <span>My Personal Library</span>
+      </div>
+    </div>
+    <div class="selector"></div>
+    <div class="underline"></div>
+    <section class="articles">
+      <div class="bookCenterMan"></div>
+    </section>
+    <div class="bookMoreInfo"></div>
+    <script src="bookselector.js"></script>
+  </body>
+</html>
